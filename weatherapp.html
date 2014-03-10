@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather App</title>
+	<link rel="stylesheet" href="weather_style.css">
+	<link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<h1 class="error"></h1>
+	<div class="weather">
+		<div class="forecastLocation"></div>
+		<div class="imageholder"></div>
+		<div class="temp"></div>
+		<div class="holder"></div>
+		<div class="feelsLike"></div>
+		<div class="details">
+			<div class="details wds"></div>
+			<div class="details wg"></div>
+			<div class="details h"></div>
+		</div>
+		<div class="activities"></div>
+		
+	</div>
+		<form action="" class="weatherForm">
+			<input type="text" name="city" placeholder="city" class="search">
+			<input type="submit" class="button" value="get weather">
+		</form>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="weather_script.js"></script>
+</body>
+</html>

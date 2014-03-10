@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Assigner!</title>
+</head>
+<body>
+  <script>
+    // Function to generate a random number
+    var randNum = function() {
+      return Math.floor(Math.random() * projects.length + 1);
+    }
+
+    // Array of people
+    var people = ["Alex Perala", "Alison Kinross", "Amy Allen", "Christopher Miller", "Daniel Thai", "Danielle Webb", "Elizabeth Melito", "Emma Harris", "Evelyn Low", "Fiona Martin", "Gab White", "Habib Akbar", "Hannah Allen", "Jana Huebert", "Jenn Brewer", "Jessica Duarte", "Jessica Marshall", "Kate Drwecka", "Lindsay Fry", "Lyman Cheung", "Mandy Thomson", "Marlene Giraud", "Nathan Foon", "Patricia Mader", "Robyn Larsen", "Sharon Chan", "Tony Bitzionis"];
+
+    // Array of projects
+    var projects = ["Heather Payne", "Hacker You", "Ladies Learning Code", "Journey Made"];
+
+    // create a blank string to hold the html
+    var html = "";
+
+    // Loop through each person and assign a project
+    for (var i = 0; i < people.length; i++) {
+      // Generate a random number. 
+      // Arrays start at 0 so we subtract 1
+      var randomNumber = randNum() - 1;
+      html += "<h2>"+ people[i] + "<br> gets <br>" + projects[randomNumber] +"</h2>";
+      console.log( people[i], " gets ", projects[randomNumber]);
+    };
+
+    // inject the HTML into the document! 
+    document.body.innerHTML = html;
+
+  </script>
+
+  <style>
+    body {
+      text-align: center;
+      font-family:sans-serif;
+      background:#34495e;
+    }
+    h2 {
+      /*float:left;*/
+      width:50%;
+      color:white;
+      display:inline-block;
+      font-size:150px;
+    }
+  </style>
+</body>
+</html>

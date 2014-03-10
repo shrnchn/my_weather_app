@@ -1,0 +1,53 @@
+chanceflurries	
+chancesnow	
+snow
+flurries
+	Build a snowman!
+
+chancesleet	
+sleet	(freezing rain)
+	Stay indoors, it's gonna be slippery outside!
+	
+chancerain	
+chancetstorms	
+rain	
+tstorms	
+	Play board games!
+
+fog	
+hazy
+	Play hide and seek in the fog!	
+
+mostlysunny	
+partlysunny	
+sunny
+	Eat some ice cream!	
+	
+mostlycloudy	
+cloudy	
+partlycloudy
+clear
+	Go for a walk	
+
+if (temp < -5 && icon === "chanceflurries" || icon === "chancesnow" || 
+				icon === "snow" || icon === "flurries") {
+				$('.activities').text("Go build a snowman!");
+			}
+			else if (temp < 0 && icon === "chancesleet" || icon === "sleet") {
+				$('.activities').text("Stay indoors, it's gonna be slippery outside!");
+			}
+			else if (temp >= 10 && icon === "chancerain" || icon === "chancetstorms" || icon === "rain" || icon === "tstorms") {
+				$('.activities').text("Play board games or dance in the rain!");
+			}
+			else if (temp >= 0 && icon === "hazy" || icon === "fog") {
+				$('.activities').text("Play hide and seek in the fog!");
+			}
+			else if (temp >= 20 && icon === "mostlysunny" || icon === "partlysunny" || icon === "sunny") {
+				$('.activities').text("Eat some ice cream!");
+			}
+			else if (temp <= 0) {
+				$('.activities').text("Go for a walk even if it's cold!");
+			}
+			else {
+				$('.activities').text("Go for a walk");
+			}
