@@ -191,42 +191,53 @@ body {
   color: #999;
   background: white;
   font-family: 'Sintony', sans-serif;
+  font-size: 10px;
 }
 
 .weather {
   width: 600px;
   margin: 20px auto;
+  font-size: 1px;
+  font-size: 1rem;
 }
 
 h1.error {
   color: #999;
   text-align: center;
+  font-size: 1px;
+  font-size: 1rem;
 }
 
 .forecastLocation {
   margin: 0;
   padding: 10px;
-  font-size: 1.75rem;
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 2rem;
 }
 
-.icon {
-  width: 200px;
+.imageholder {
   margin: 10px;
-  padding: 10px;
   float: left;
   background: white;
+}
+
+.imageholder img {
+  width: 200px;
 }
 
 .temp {
   width: 300px;
   float: left;
   text-align: right;
+  font-size: 100px;
   font-size: 10rem;
 }
 
 .holder {
   width: 70px;
   float: left;
+  font-size: 30px;
   font-size: 3rem;
   margin-top: 30px;
 }
@@ -235,6 +246,7 @@ h1.error {
   width: 590px;
   text-align: right;
   clear: both;
+  font-size: 15px;
   font-size: 1.5rem;
 }
 
@@ -242,16 +254,9 @@ h1.error {
   width: 590px;
   margin: 0;
   padding: 10px;
+  font-size: 10px;
+  font-size: 1rem;
   clear: both;
-}
-
-.activities {
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 10px;
-  font-size: 1.5rem;
-  color: #f39c12;
 }
 
 .show {
@@ -270,6 +275,8 @@ input {
   color: #999;
   border: 1px solid white;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+  font-size: 1rem;
 }
 
 input:focus {
@@ -286,4 +293,86 @@ input:focus {
 
 .button:hover {
   background: #f39c12;
+}
+
+@media (max-width: 480px) {
+  .weather {
+    width: 350px;
+    margin: 20px auto;
+  }
+
+  .forecastLocation {
+    margin: 0;
+    font-weight: bold;
+    font-size: 15.5px;
+    font-size: 1.55rem;
+  }
+
+  .imageholder {
+    float: left;
+    margin-left: 10px;
+    background: white;
+  }
+
+  .imageholder img {
+    width: 120px;
+  }
+
+  .temp {
+    width: 130px;
+    float: left;
+    margin: 0 5px 0 0;
+    text-align: right;
+    font-size: 60px;
+    font-size: 6rem;
+    letter-spacing: -0.5rem;
+  }
+
+  .holder {
+    margin-top: 15px;
+    float: right;
+  }
+
+  .feelsLike {
+    width: 350px;
+    padding: 0;
+    text-align: right;
+    clear: both;
+    font-size: 13.5px;
+    font-size: 1.35rem;
+  }
+
+  .details {
+    width: 320px;
+    margin-right: 20px;
+    clear: both;
+  }
+
+  .wds, .wg, .h {
+    padding: 10px;
+  }
+
+  .show {
+    display: block;
+  }
+
+  form {
+    width: 350px;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  input {
+    width: 200px;
+    font-size: 8px;
+    font-size: 0.8rem;
+  }
+
+  input:focus {
+    outline: 0;
+  }
+
+  .button {
+    width: 100px;
+  }
 }
